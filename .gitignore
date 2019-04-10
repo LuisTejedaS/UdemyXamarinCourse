@@ -3,3 +3,12 @@
 ################################################################################
 
 /src/.vs/Hello world/v16
+/src/Hello world/Hello_world/bin/Debug
+/src/Hello world/Hello_world/obj/Debug
+/src/Hello world/Hello_world.Android/bin/Debug
+/src/Hello world/Hello_world.Android/obj
+/src/Hello world/Hello_world.iOS/bin/iPhone/Debug
+/src/Hello world/Hello_world.iOS/obj/iPhone/Debug
+/src/Hello world/Hello_world.UWP/bin/x86/Debug
+/src/Hello world/Hello_world.UWP/obj
+/src/packages

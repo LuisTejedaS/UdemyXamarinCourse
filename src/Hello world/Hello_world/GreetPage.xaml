@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hello_world.GreetPage"
+             Padding="0,20,0,0">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                iOS="0,20,0,0"
+                Android="0,20,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout 
+        BindingContext="{x:Reference slider}"
+        HorizontalOptions="Center">
+        <!--<StackLayout HorizontalOptions="Center" VerticalOptions="Center">-->
+        <Button  Text="Click me" Clicked="Button_Clicked"></Button>
+        <!-- <Label Text="Hello World" x:Name="label"/>-->
+        <!--<Slider ValueChanged="Slider_ValueChanged" x:Name="slider-->
+        <!--<Label Text="{Binding
+            Source={x:Reference slider},
+            Path = Value,
+            StringFormat = 'Value is {0:F2}' }" x:Name="label"
+               Opacity="{Binding 
+            Source={x:Reference slider},
+            Path=Value}"/>
+        <Slider   x:Name="slider"/>-->
+        
+        <!--Se puede llevar el binding context a stacklayout y todos los hijos lo heredan quedando los valores como en label-->
+        <BoxView Color="Green" Opacity="{Binding Source={x:Reference slider},Path=Value}"/>
+        <Label BindingContext="{x:Reference slider}"
+                Text="{Binding Value, 
+                StringFormat= 'Value is {0:F2}'}"
+                Opacity="{Binding Value}"
+                x:Name="label"/>
+        <Slider   x:Name="slider"/>
+    </StackLayout>
+</ContentPage>
